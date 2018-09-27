@@ -1,11 +1,13 @@
   <?php
 
-    include('header.php');
+  session_start();
 
     require 'config.php';
 
+    include('header.php');
 
-$req = $bdd->prepare('SELECT pseudo, pass FROM members WHERE pseudo = :pseudo');
+
+$req = $bdd->prepare('SELECT * FROM members WHERE pseudo = :pseudo');
 
 $req->execute(array(
   'pseudo' => $_POST['pseudo']
@@ -20,17 +22,10 @@ if($isPasswordCorrect){
   session_start();
 
   $_SESSION['pseudo'] = $_POST['pseudo'];
+  $_SESSION['id'] = $resultat['id'];
 
-?>
-
-
-    <div class="redirection">
-        <p> Back Home ! </p>
-    </div>
-
-
-<?php
-  header('Refresh:2; URL=index.php');
+  echo "Back Home !";
+  header('Refresh:1; URL=index.php');
 
 } else {
 

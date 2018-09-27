@@ -25,7 +25,7 @@ if (isset($_POST['email']) AND isset($_POST['pseudo'])){
 
             $pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
-            $stmt = $bdd->prepare("INSERT INTO members(pseudo, pass, email, date_inscription) VALUES (:pseudo, :pass, :email, NOW())");
+            $stmt = $bdd->prepare("INSERT INTO members(pseudo, pass, email) VALUES (:pseudo, :pass, :email)");
 
             $stmt->bindParam(':pseudo', $_POST['pseudo']);
             $stmt->bindParam(':pass', $pass_hache);

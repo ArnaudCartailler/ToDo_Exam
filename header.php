@@ -21,7 +21,7 @@
 
 <body>
 
-<div class="container-fluid">
+<div class="container-fluid header">
 
   <div class ="row text-center">
 
@@ -29,14 +29,20 @@
       <a href="index.php">Home</a>
     </div>
 
-      <div class="col-md-4 signin">
-        <a href="formmembers.php">Sign in</a>
+      <div class="col-md-4 connexion">
+        <a href="connexion.php">Sign in/up</a>
       </div>
 
-      <div class="col-md-4 connexion">
-        <a href="connexion.php">Connexion</a>
+      <div class="col-md-4 disconnect">
+        <a href="deco.php">Disconnect</a>
       </div>
 
   </div>
 
 </div>
+
+<!-- if (!empty($_SESSION['id'])) {
+  mettre HTML du mec connecté
+} else{
+  mettre HTML du mec pas co.
+} -->

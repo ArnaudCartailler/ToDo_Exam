@@ -12,10 +12,15 @@
                       <input type="password" name="pass2" required/>
 
                     <p>Veuillez taper votre email:</p>
-                      <input type="email" name="email" required/>
+                      <input type="email" name="email" required/><br />
 
-                    <p >Valider :</p>
                       <input class="sub" type="submit" name="valid" value="Valider l'inscription" />
      </form>
+
+     <div class="col-md-3 connexion">
+
+       <a href="connexion.php">Sign up</a>
+
+     </div>
 
 <?php include('footer.php') ?>
