@@ -4,7 +4,8 @@ session_start();
 require 'config.php';
 include('header.php');
 
-$req = $bdd->prepare('SELECT * FROM project WHERE id = :id');
+$req = $bdd->prepare('SELECT * FROM project WHERE id = ?');
+
 $req->execute(array($_GET['project']));
 $project = $req->fetch();
 
