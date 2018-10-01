@@ -1,21 +1,50 @@
 <?php
 
+session_start();
+
 require 'config.php';
 
-if (!empty($_POST['name']) AND !empty($_POST['date_limit'])) {
 
-  $name = htmlspecialchars($_POST['name']);
-  $date_limit = htmlspecialchars($_POST['date_limit']);
+if (isset($_POST['name'])){
 
-  if ($name, $date_limit)) {
-    $newtask = $bdd->prepare("INSERT INTO list (name, date_limit, done, id_project) VALUES (:name, :date_limit, :done, :id_project)");
-    $newtask->execute(array(
-      'name' => $name,
-      'date_limit' => $date_limit,
-      'done' => 0,
-      'id_project' => $_GET['project']
-    ));
+    $_POST['name'] = htmlspecialchars($_POST['name']);
 
-    header('Refresh:1; location: project.php);
-  }
-}
+            $stmt = $bdd->prepare("INSERT INTO list(name, id_project, done) VALUES (:name, :id_project, :done)");
+
+            $id_project = $_GET['project'];
+
+            $stmt->execute(array(
+              'name' => $_POST['name'],
+              'id_project' => $id_project,
+              'done' => 0
+            ));
+
+            ?>
+
+                <div class="redirection">
+                    <p> List added ! </p>
+                </div>
+
+          <?php
+
+
+                header("Refresh:1; URL=project.php?project=" . $_GET['project'] ."");
+                unset($bdd);
+             }
+
+             else{
+
+               ?>
+
+                     <div class="redirection">
+                         <p> Incorrect, try again ! </p>
+                     </div>
+
+
+               <?php
+
+                header('Refresh:1; URL=form_list.php');
+
+             }
+
+?>
