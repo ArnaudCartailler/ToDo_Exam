@@ -217,6 +217,10 @@ textarea {
   list-style :none;
 }
 
+.list_name .detail_project ul li{
+  margin-bottom: 20px;
+}
+
 /*connexion page*/
 
 .connect {
@@ -284,6 +288,17 @@ textarea {
 
 }
 
+/*list name*/
+
+.list_row .task{
+  width : 35%;
+  margin-left: 50px;
+}
+
+.column .column_name ul li{
+  text-align: justify;
+  list-style : none;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

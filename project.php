@@ -22,7 +22,7 @@ if($project['done'] == 0){
   <div class="list col-md-6 col-xs-12 d-flex mt-3 text-justify">
       <div class="list_name">
 
-      <ul class="detail_project">
+      <ul class="detail_project mb-2">
         <li><?php echo $project['name'] ?></li>
         <li><?php echo $project['summary'] ?></li>
         <li><?php echo $project['limit_date'] ?></li>
@@ -53,6 +53,7 @@ if($project['done'] == 0){
 
 <?php
 
+/*For the listing*/
 
 $project = $_GET['project'];
 
@@ -64,29 +65,65 @@ $stmt->execute(array(
 
 $list = $stmt->fetchAll();
 
-if($list['done'] == 0){
- $list_real = 'Non fait';
-}else{
- $list_real = 'Fait';
-}
+  if($list['done'] == 0){
+
+     $list_real = 'Non fait';
+
+  }else{
+
+     $list_real = 'Fait';
+  }
 
 ?>
 
 <div class="container-fluid">
- <div class="row">
+ <div class="row list_row">
 
 <?php foreach($list as $key => $value){ ?>
- <div class="column col-md-6 col-xs-12 d-flex mt-3 text-justify">
-     <div class="column_name">
+
+<a class="task" href="task.php?list=<?php echo $value['id'] ?>">
+
+ <div class="column col-md-4 col-xs-12 d-flex mt-3 text-center">
+     <div class="column_name w-100">
 
      <ul class="detail_list">
        <li><?php echo $value['name'] ?></li>
        <li><?php echo $list_real ?></li>
      </ul>
 
+       <div class="detail_task">
+
+         <?php
+
+         /*For the task*/
+
+         $tasklist = $value['id'];
+
+         $det = $bdd->prepare('SELECT * FROM task WHERE id_list = :list');
+
+         $det->execute(array(
+           'list'=> $tasklist
+         ));
+
+         $task = $det->fetchAll();
+
+
+?>
+
+      <?php foreach($task as $key => $value_task){ ?>
+         <p><?php echo $value_task['name'] ?><?php echo $value_task['date_limit'] ?></p>
+
+         <?php
+       }
+
+       ?>
+
+      </div>
+
    </div>
  </div>
 
+</a>
  <?php
 
 }
