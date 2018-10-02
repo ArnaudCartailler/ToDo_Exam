@@ -290,15 +290,74 @@ textarea {
 
 /*list name*/
 
+.all_listing a{
+  color : black;
+}
+
+.all_listing a:hover{
+  color : black;
+  text-decoration: none;
+}
+
+.detail_list{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .list_row .task{
-  width : 35%;
+  width : 100%;
   margin-left: 50px;
+}
+
+.column {
+  width : 150%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-left: 20px;
+  padding: 20px 0px 20px 0px;
 }
 
 .column .column_name ul li{
   text-align: justify;
   list-style : none;
 }
+
+.column .column_name p{
+  text-align: left;
+}
+
+.column{
+  background: #f9f9fa;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px;
+  text-transformation: uppercase;
+  font-family: 'arial', sans-serif;
+  font-weight: bold;
+  margin-top: 45px;
+ color:white;
+  padding:20px;
+  display: block;
+  background-image: linear-gradient(to left,
+    transparent,
+    transparent 50%,
+    #00c6ff 50%,
+    #00c6ff);
+  background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .5s ease-in;
+
+}
+.column:hover{
+  background-position: 0 0;
+  border-radius: 100px;
+  border : none;
+  color:#333;
+  box-shadow: 5px 5px 5px lightgrey;
+
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

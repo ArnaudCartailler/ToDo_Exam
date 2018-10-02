@@ -76,19 +76,18 @@ $list = $stmt->fetchAll();
 
 ?>
 
-<div class="container-fluid">
+<div class="container-fluid all_listing">
  <div class="row list_row">
 
 <?php foreach($list as $key => $value){ ?>
 
-<a class="task" href="task.php?list=<?php echo $value['id'] ?>">
 
  <div class="column col-md-4 col-xs-12 d-flex mt-3 text-center">
+   <a class="task" href="task.php?list=<?php echo $value['id'] ?>">
      <div class="column_name w-100">
 
      <ul class="detail_list">
-       <li><?php echo $value['name'] ?></li>
-       <li><?php echo $list_real ?></li>
+       <li><?php echo $value['name'] . ' ' . '/'. ' ' . $list_real ?></li>
      </ul>
 
        <div class="detail_task">
@@ -107,23 +106,33 @@ $list = $stmt->fetchAll();
 
          $task = $det->fetchAll();
 
-
 ?>
+        <ul>
 
-      <?php foreach($task as $key => $value_task){ ?>
-         <p><?php echo $value_task['name'] ?><?php echo $value_task['date_limit'] ?></p>
+      <?php foreach($task as $key => $value_task){
+
+        if($value_task['done'] == 0){
+
+           $task_real = 'Non fait';
+
+        }if($value_task['done'] == 1){
+
+           $task_real = 'Fait';
+        }
+?>
+         <li><?php echo $value_task['name'] . ' ' . '/' . ' ' . $value_task['date_limit'] . ' ' . '/' . ' ' . $task_real ?></li>
 
          <?php
        }
 
        ?>
-
+     </ul>
       </div>
 
    </div>
+ </a>
  </div>
 
-</a>
  <?php
 
 }

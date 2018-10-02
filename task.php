@@ -16,6 +16,8 @@ $task = $det->fetchAll();
 
 ?>
 
+<a href="project.php?project=<?php ?>"
+  
 <form class="form_project" action="add_task.php?list=<?php echo $_GET['list'] ?>" method="post">
 
   <p>Task Name</p>
@@ -34,14 +36,29 @@ $task = $det->fetchAll();
 
 <div class="detail_task">
 
+  <p> Click on a task to modify it </p>
 
-<?php foreach($task as $key => $value){ ?>
-   <p><?php echo $value['name'] ?><?php echo $value['date_limit'] ?></p>
+  <ul>
+<?php foreach($task as $key => $value){
+
+  if($value['done'] == 0){
+
+     $task_real = 'Non fait';
+
+  }if($value['done'] == 1){
+
+     $task_real = 'Fait';
+  }
+
+?>
+
+   <a href="modify_taskform.php?task=<?php echo $value['id'] ?>&amp;list=<?php echo $_GET['list'] ?>"><li><?php echo $value['name'] . ' ' . ' /' . ' ' . $value['date_limit'] . ' ' .  '/' . ' ' . $task_real ?></li></a>
 
    <?php
  }
 
  ?>
+</ul>
 </div>
 
 <?php
