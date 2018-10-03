@@ -399,6 +399,47 @@ textarea {
 
 }
 
+/*profil page*/
+
+.form_profilchange{
+width: 100%;
+margin-top: 20px;
+padding: 30px 0px 30px 20px;
+margin-left: 500px;
+}
+
+.form_profilchange p{
+margin-top: 10px;
+}
+
+.form_profilchange input{
+border: none;
+border-bottom: 3px solid grey;
+border-top: 3px solid grey;
+}
+
+.form_profilchange input:hover{
+border-bottom: 3px solid #02C2E6;
+border-top: 3px solid #02C2E6;
+transition: 0.4s;
+box-shadow: 5px 5px 5px lightgrey;
+}
+
+.form_profilchange .sub{
+background-color: #02C2E6;
+padding: 5px 10px 5px 10px;
+color : black;
+font-size: 20px;
+margin-top: 20px;
+border: none;
+transition: 0.3s;
+margin-left: 60px;
+}
+
+.form_profilchange .sub:hover{
+border-radius: 100px;
+transition: 0.6s;
+}
 /*project on project page*/
 
 .list ul li{

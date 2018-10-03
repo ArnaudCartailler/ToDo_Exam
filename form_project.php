@@ -4,6 +4,13 @@
 
 ?>
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Add project</li>
+  </ol>
+</nav>
+
 <form class="form_addproject" action="add_project.php" method="post">
 
   <p>Project Name:</p>

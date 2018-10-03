@@ -13,7 +13,7 @@ include('header.php');
   </ol>
 </nav>
 
-<form action="changeprofil.php" method="post" enctype="multipart/form-data">
+<form class="form_profilchange" action="changeprofil.php" method="post" enctype="multipart/form-data">
 
                   <p>Your new pseudo:</p>
                     <input type="text" name="pseudo" required />
@@ -27,7 +27,7 @@ include('header.php');
                     <p>Confirm your new password:</p>
                       <input type="password" name="pass3" required /> <br />
 
-                      <input type="submit" name="valid" value="Valider" />
+                      <input class="sub" type="submit" name="valid" value="Valider" />
      </form>
 
 
