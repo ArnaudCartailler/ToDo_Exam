@@ -11,6 +11,12 @@ $project = $bdd->query('SELECT * FROM project WHERE id_members = ' . $_SESSION["
 
 ?>
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Home</li>
+  </ol>
+</nav>
+
 <div class="welcome">
   <p> Bonjour<?php echo ' '.$_SESSION['pseudo']; ?></p>
 </div>

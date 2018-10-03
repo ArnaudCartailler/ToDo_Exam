@@ -2,8 +2,15 @@
     include('header.php');
   ?>
 
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Sign up</li>
+    </ol>
+  </nav>
+
 <div class="connect">
-  
+
   <div class="signin">
     <a href="formmembers.php">Sign in</a>
   </div>

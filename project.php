@@ -18,6 +18,13 @@ if($project['done'] == 0){
 
 ?>
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Project</li>
+  </ol>
+</nav>
+
 
   <div class="list col-md-12 col-xs-12 p-0 m-0 mt-3 text-center">
       <div class="list_name">
@@ -52,11 +59,11 @@ $list = $stmt->fetchAll();
 
   if($list['done'] == 0){
 
-     $list_real = 'Non fait';
+     $list_real = 'Not done';
 
   }else{
 
-     $list_real = 'Fait';
+     $list_real = 'Done';
   }
 
 ?>
@@ -99,11 +106,11 @@ $list = $stmt->fetchAll();
 
         if($value_task['done'] == 0){
 
-           $task_real = 'Non fait';
+           $task_real = 'Not done';
 
         }if($value_task['done'] == 1){
 
-           $task_real = 'Fait';
+           $task_real = 'Done';
         }
 ?>
          <li><?php echo $value_task['name'] . ' ' . '/' . ' ' . $value_task['date_limit'] . ' ' . '/' . ' ' . $task_real ?></li>

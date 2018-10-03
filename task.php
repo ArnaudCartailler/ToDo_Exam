@@ -16,6 +16,14 @@ $task = $det->fetchAll();
 
 ?>
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item"><a href="project.php?project=<?php echo $_GET['project'] ?>">Project</a></li>
+    <li class="breadcrumb-item active" aria-current="page">List details</li>
+  </ol>
+</nav>
+
 <div class="container-fluid ">
   <div class="row">
 

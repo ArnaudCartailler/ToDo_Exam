@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>TODO</title>
-  <meta name="description" content="TP_membre">
+  <title>My TODO List</title>
+  <meta name="description" content="Website for making your own todo list">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
@@ -25,15 +25,19 @@
 
   <div class ="row text-center">
 
-    <div class="col-md-4 index">
+    <div class="col-md-3 index">
       <a href="index.php">Home</a>
     </div>
 
-      <div class="col-md-4 connexion">
+      <div class="col-md-3 connexion">
         <a href="connexion.php">Sign in/up</a>
       </div>
 
-      <div class="col-md-4 disconnect">
+      <div class="col-md-3 profil">
+        <a href="profil.php">Change profil</a>
+      </div>
+
+      <div class="col-md-3 disconnect">
         <a href="deco.php">Disconnect</a>
       </div>
 
