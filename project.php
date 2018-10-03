@@ -35,7 +35,7 @@ if($project['done'] == 0){
         <li><?php echo $project['limit_date'] ?></li>
         <li><?php echo $real ?></li>
 
-          <form class="trash" action="deleteproject.php?project=<?php echo $value['id'] ?>" method="post">
+          <form class="trash" action="deleteproject.php?project=<?php echo $_GET['project'] ?>" method="post">
             <input class="trashin" type="submit" value="&#10007;">
           </form>
 
