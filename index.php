@@ -32,7 +32,7 @@ $project = $bdd->query('SELECT * FROM project WHERE id_members = ' . $_SESSION["
 
     <?php foreach($project as $key => $value){ ?>
 
-      <div class="project col-md-4 col-xs-12 d-flex text-center justify-content-center">
+      <div class="project col-md-4 col-xs-12 d-flex mb-5 text-center justify-content-center">
         <a class="link_project" href=project.php?project=<?php echo $value['id'] ?>>
           <div class="project_name">
 

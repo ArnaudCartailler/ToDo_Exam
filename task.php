@@ -16,43 +16,51 @@ $task = $det->fetchAll();
 
 ?>
 
-<a href="project.php?project=<?php ?>"
-  
-<form class="form_project" action="add_task.php?list=<?php echo $_GET['list'] ?>" method="post">
+<div class="container-fluid ">
+  <div class="row">
 
-  <p>Task Name</p>
+    <div class="form col-md-6">
 
-  <input type="text" name="name" placeholder="name" required/>
+      <form class="form_project" action="add_task.php?list=<?php echo $_GET['list'] ?>&project=<?php echo $_GET['project'] ?>" method="post">
 
-  <p>Limit Date</p>
+        <p>Task Name</p>
 
-  <input type="date" name="date_limit" required/>
+        <input type="text" name="name" placeholder="name" required/>
 
-  <input class="sub" type="submit"name="valid" value="Send"/>
+        <p>Limit Date</p>
 
-</form>
+        <input type="date" name="date_limit" required/><br />
+
+        <input class="sub" type="submit"name="valid" value="Send"/>
+
+      </form>
+
+  </div>
 
 <!--For the task-->
 
-<div class="detail_task">
+<div class="detail_task col-md-6">
 
-  <p> Click on a task to modify it </p>
+  <p> Click on a task to modify it :</p>
 
   <ul>
 <?php foreach($task as $key => $value){
 
   if($value['done'] == 0){
 
-     $task_real = 'Non fait';
+     $task_real = 'Not done';
 
   }if($value['done'] == 1){
 
-     $task_real = 'Fait';
+     $task_real = 'Done';
   }
 
 ?>
 
-   <a href="modify_taskform.php?task=<?php echo $value['id'] ?>&amp;list=<?php echo $_GET['list'] ?>"><li><?php echo $value['name'] . ' ' . ' /' . ' ' . $value['date_limit'] . ' ' .  '/' . ' ' . $task_real ?></li></a>
+   <a href="modify_taskform.php?task=<?php echo $value['id'] ?>&amp;list=<?php echo $_GET['list'] ?>&amp;project=<?php echo $_GET['project'] ?>"><li><?php echo $value['name'] . ' ' . ' /' . ' ' . $value['date_limit'] . ' ' .  '/' . ' ' . $task_real ?></li></a>
+   <form class="trash" action="deletetask.php?task=<?php echo $value['id'] ?>&amp;list=<?php echo $_GET['list'] ?>&amp;project=<?php echo $_GET['project'] ?>" method="post">
+     <input class="trashin" type="submit" value="&#10007;">
+   </form>
 
    <?php
  }
@@ -60,6 +68,11 @@ $task = $det->fetchAll();
  ?>
 </ul>
 </div>
+
+</div>
+</div>
+
+<a class="back_pro" href="project.php?project=<?php echo $_GET['project'] ?>">Back to Project page</a>
 
 <?php
 

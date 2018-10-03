@@ -27,7 +27,7 @@ if (isset($_POST['name'])){
           <?php
 
 
-                header("Refresh:1; URL=task.php?list=" . $_GET['list'] ."");
+                header("Refresh:1; URL=task.php?list=" . $_GET['list'] ."&project=" . $_GET['project'] ."");
                 unset($bdd);
              }
 
@@ -42,7 +42,7 @@ if (isset($_POST['name'])){
 
                <?php
 
-                header("Refresh:1; URL=task.php?list=" . $_GET['list'] ."");
+                header("Refresh:1; URL=task.php?list=" . $_GET['list'] ."&project=" . $_GET['project'] ."");
 
              }
 

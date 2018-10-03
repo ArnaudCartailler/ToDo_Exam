@@ -1,6 +1,10 @@
 <?php include('header.php') ?>
 
-<form action="addmembers.php" method="post" enctype="multipart/form-data">
+<div class="connexion_form">
+  <a class="signup" href="connexion.php">Sign up</a>
+</div>
+
+<form class="addmembers" action="addmembers.php" method="post" enctype="multipart/form-data">
 
                   <p>Veuillez taper votre pseudo:</p>
                     <input type="text" name="pseudo" required/>
@@ -14,13 +18,8 @@
                     <p>Veuillez taper votre email:</p>
                       <input type="email" name="email" required/><br />
 
-                      <input class="sub" type="submit" name="valid" value="Valider l'inscription" />
+                      <input class="sub" type="submit" name="valid" value="Valid sign in" />
      </form>
 
-     <div class="col-md-3 connexion">
-
-       <a href="connexion.php">Sign up</a>
-
-     </div>
 
 <?php include('footer.php') ?>

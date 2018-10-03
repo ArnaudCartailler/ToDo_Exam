@@ -19,10 +19,10 @@ if($project['done'] == 0){
 ?>
 
 
-  <div class="list col-md-6 col-xs-12 d-flex mt-3 text-justify">
+  <div class="list col-md-12 col-xs-12 p-0 m-0 mt-3 text-center">
       <div class="list_name">
 
-      <ul class="detail_project mb-2">
+      <ul class="detail_project m-0 p-0">
         <li><?php echo $project['name'] ?></li>
         <li><?php echo $project['summary'] ?></li>
         <li><?php echo $project['limit_date'] ?></li>
@@ -35,21 +35,6 @@ if($project['done'] == 0){
       </ul>
     </div>
   </div>
-
-
-</div>
-</div>
-
-<div class="container-fluid my-5">
-  <div class="row">
-
-    <div class="add col-md-6 col-sm-6 mx-auto text-center mb-2">
-      <a class="form_list" href="form_list.php?project=<?php echo $_GET['project'] ?>"><i class="fas fa-plus-circle"></i></a>
-    </div>
-
-  </div>
-</div>
-
 
 <?php
 
@@ -76,19 +61,20 @@ $list = $stmt->fetchAll();
 
 ?>
 
-<div class="container-fluid all_listing">
- <div class="row list_row">
+<div class="container-fluid all_listing p-0 m-0">
+ <div class="row list_row p-0 m-0">
 
 <?php foreach($list as $key => $value){ ?>
 
 
- <div class="column col-md-4 col-xs-12 d-flex mt-3 text-center">
-   <a class="task" href="task.php?list=<?php echo $value['id'] ?>">
+ <div class="column col-md-5 col-xs-12 mx-auto text-center">
+   <a class="task" href="task.php?list=<?php echo $value['id'] ?>&amp;project=<?php echo $_GET['project'] ?>">
      <div class="column_name w-100">
 
      <ul class="detail_list">
        <li><?php echo $value['name'] . ' ' . '/'. ' ' . $list_real ?></li>
      </ul>
+
 
        <div class="detail_task">
 
@@ -127,6 +113,11 @@ $list = $stmt->fetchAll();
 
        ?>
      </ul>
+
+     <form class="trash" action="deletelist.php?list=<?php echo $value['id'] ?>&amp;project=<?php echo $_GET['project'] ?>" method="post">
+       <input class="trashin" type="submit" value="&#10007;">
+     </form>
+
       </div>
 
    </div>
@@ -140,6 +131,16 @@ $list = $stmt->fetchAll();
 ?>
 
 </div>
+</div>
+
+<div class="container-fluid my-5">
+  <div class="row">
+
+    <div class="add col-md-6 col-sm-6 mx-auto text-center mb-2">
+      <a class="form_list" href="form_list.php?project=<?php echo $_GET['project'] ?>"><i class="fas fa-plus-circle"></i></a>
+    </div>
+
+  </div>
 </div>
 
 <?php
