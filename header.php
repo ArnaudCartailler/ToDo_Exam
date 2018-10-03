@@ -25,28 +25,27 @@
 
   <div class ="row text-center">
 
-    <div class="col-md-3 index">
-      <a href="index.php">Home</a>
-    </div>
-
-      <div class="col-md-3 connexion">
-        <a href="connexion.php">Sign in/up</a>
-      </div>
-
-      <div class="col-md-3 profil">
+<?php
+      if (!empty($_SESSION['id'])) {
+        echo '<div class="col-md-4 index">
+          <a href="index.php">Home</a>
+        </div>';
+        echo '<div class="col-md-4 profil">
         <a href="profil.php">Change profil</a>
-      </div>
-
-      <div class="col-md-3 disconnect">
-        <a href="deco.php">Disconnect</a>
-      </div>
+        </div>';
+        echo '<div class="col-md-4 disconnect">
+          <a href="deco.php">Disconnect</a>
+        </div>';
+      }else{
+        echo '<div class="col-md-6 index">
+          <a href="index.php">Home</a>
+        </div>';
+        echo '<div class="col-md-6 connexion">
+          <a href="connexion.php">Sign in/up</a>
+        </div>';
+      }
+?>
 
   </div>
 
 </div>
-
-<!-- if (!empty($_SESSION['id'])) {
-  mettre HTML du mec connecté
-} else{
-  mettre HTML du mec pas co.
-} -->
