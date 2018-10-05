@@ -17,19 +17,20 @@ $resultat = $req->fetch();
 
 $isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']);
 
+
 if($isPasswordCorrect){
 
-  session_start();
-
-  $_SESSION['pseudo'] = $_POST['pseudo'];
-  $_SESSION['id'] = $resultat['id'];
-
+ $_SESSION['pseudo'] = $_POST['pseudo'];
+ $_SESSION['id'] = $resultat['id'];
+ $_SESSION['admin'] = $resultat['admin'];
+  
   echo "Back Home !";
   header('Refresh:1; URL=index.php');
 
 } else {
 
   echo "Acces Denied";
+    header('Refresh:1; URL=connexion.php');
 
 }
 

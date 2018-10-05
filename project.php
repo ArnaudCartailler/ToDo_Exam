@@ -15,7 +15,6 @@ if($project['done'] == 0){
   $real = 'Fait';
 }
 
-
 ?>
 
 <nav aria-label="breadcrumb">

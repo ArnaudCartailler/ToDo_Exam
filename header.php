@@ -26,7 +26,7 @@
   <div class ="row text-center">
 
 <?php
-      if (!empty($_SESSION['id'])) {
+      if (!empty($_SESSION['id']) AND $_SESSION['admin'] == 0) {
         echo '<div class="col-md-4 index">
           <a href="index.php">Home</a>
         </div>';
@@ -36,7 +36,20 @@
         echo '<div class="col-md-4 disconnect">
           <a href="deco.php">Disconnect</a>
         </div>';
-      }else{
+      } else if(!empty($_SESSION['id']) AND $_SESSION['admin']== 1){
+            echo '<div class="col-md-3 index">
+          <a href="index.php">Home</a>
+        </div>';
+        echo '<div class="col-md-3 profil">
+        <a href="profil.php">Change profil</a>
+        </div>';
+        echo '<div class="col-md-3 profil">
+        <a href="adminpage.php">Admin page</a>
+        </div>';
+        echo '<div class="col-md-3 disconnect">
+          <a href="deco.php">Disconnect</a>
+        </div>';
+      } else{
         echo '<div class="col-md-6 index">
           <a href="index.php">Home</a>
         </div>';

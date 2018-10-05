@@ -17,14 +17,14 @@ $project = $bdd->query('SELECT * FROM project WHERE id_members = ' . $_SESSION["
   </ol>
 </nav>
 
-<div class="welcome">
+<div class="welcome p-0 m-0">
   <p> Bonjour<?php echo ' '.$_SESSION['pseudo']; ?></p>
 </div>
 
 <div class="container-fluid my-5">
   <div class="row">
 
-    <div class="add col-md-6 col-sm-6 mx-auto text-center mb-2">
+    <div class="add col-md-6 col-sm-6 mx-auto  p-0 m-0 text-center mb-2">
       <a class="form_project" href="form_project.php"><i class="fas fa-plus-circle"></i></a>
     </div>
 
