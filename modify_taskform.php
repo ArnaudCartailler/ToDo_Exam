@@ -4,7 +4,7 @@
 
 ?>
 
-<form class="form_modify" action="update_task.php?list=<?php echo $_GET['list'] ?>&amp;task=<?php echo $_GET['task'] ?>&amp;project=<?php echo $_GET['project'] ?>" method="post">
+<form class="form_modify" action="update_task.php?list=<?php echo $_GET['list'] ?>&amp;task=<?php echo $_GET['task'] ?>&amp;project=<?php echo $_GET['project'] ?>&amp;id=<?php echo $_SESSION['id'] ?>" method="post">
 
 <div class="custom-control custom-checkbox">
 

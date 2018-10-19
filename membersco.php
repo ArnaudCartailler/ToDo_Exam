@@ -23,8 +23,8 @@ if($isPasswordCorrect){
  $_SESSION['pseudo'] = $_POST['pseudo'];
  $_SESSION['id'] = $resultat['id'];
  $_SESSION['admin'] = $resultat['admin'];
-  
-  echo "Back Home !";
+
+  echo '<img class="loading m-5" src="img/ping.gif"> Back Home !';
   header('Refresh:1; URL=index.php');
 
 } else {

@@ -11,12 +11,12 @@ require('config.php');
 
     echo "Project deleted";
 
-    header('Refresh:1; URL=index.php');
+    header('Refresh:1; URL=index.php?id=<?php echo $_SESSION['id'] ?>');
 
   } else {
 
     echo "Project not deleted";
 
-    header('Refresh:1; URL=index.php');
+    header('Refresh:1; URL=index.php?id=<?php echo $_SESSION['id'] ?>');
 
 }

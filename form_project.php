@@ -11,7 +11,7 @@
   </ol>
 </nav>
 
-<form class="form_addproject" action="add_project.php" method="post">
+<form class="form_addproject" action="add_project.php?id=<?php echo $_SESSION['id'] ?>" method="post">
 
   <p>Project Name:</p>
   <input type="text" name="name" required/>

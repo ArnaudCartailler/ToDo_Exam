@@ -1,5 +1,7 @@
   <?php
-    include('header.php');
+
+  include('header.php');
+
   ?>
 
   <nav aria-label="breadcrumb">
@@ -30,6 +32,7 @@
 
 
 </div>
+
   <?php
     include('footer.php')
   ?>

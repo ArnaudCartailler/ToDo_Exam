@@ -29,7 +29,7 @@ if (isset($_POST['name']) AND !empty($_POST['summary']) AND isset($_POST['summar
 
             <?php
 
-                header('Refresh:1; URL=index.php');
+                header('Refresh:1; URL=index.php?id=<?php echo $_SESSION['id'] ?>');
                 unset($bdd);
              }
 
@@ -44,7 +44,7 @@ if (isset($_POST['name']) AND !empty($_POST['summary']) AND isset($_POST['summar
 
                <?php
 
-                header('Refresh:1; URL=form_project.php');
+                header('Refresh:1; URL=form_project.php?id=<?php echo $_SESSION['id'] ?>');
 
              }
 

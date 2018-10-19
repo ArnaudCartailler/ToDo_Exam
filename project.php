@@ -34,7 +34,7 @@ if($project['done'] == 0){
         <li><?php echo $project['limit_date'] ?></li>
         <li><?php echo $real ?></li>
 
-          <form class="trash" action="deleteproject.php?project=<?php echo $_GET['project'] ?>" method="post">
+          <form class="trash" action="deleteproject.php?project=<?php echo $_GET['project'] ?>&amp;id=<?php echo $_SESSION['id'] ?>" method="post">
             <input class="trashin" type="submit" value="&#10007;">
           </form>
 
@@ -74,7 +74,7 @@ $list = $stmt->fetchAll();
 
 
  <div class="column col-md-5 col-xs-12 mx-auto text-center">
-   <a class="task" href="task.php?list=<?php echo $value['id'] ?>&amp;project=<?php echo $_GET['project'] ?>">
+   <a class="task" href="task.php?list=<?php echo $value['id'] ?>&amp;project=<?php echo $_GET['project'] ?>&amp;id=<?php echo $_SESSION['id'] ?>">
      <div class="column_name w-100">
 
      <ul class="detail_list">
@@ -120,7 +120,7 @@ $list = $stmt->fetchAll();
        ?>
      </ul>
 
-     <form class="trash" action="deletelist.php?list=<?php echo $value['id'] ?>&amp;project=<?php echo $_GET['project'] ?>" method="post">
+     <form class="trash" action="deletelist.php?list=<?php echo $value['id'] ?>&amp;project=<?php echo $_GET['project'] ?>&amp;id=<?php echo $_SESSION['id'] ?>" method="post">
        <input class="trashin" type="submit" value="&#10007;">
      </form>
 
@@ -143,7 +143,7 @@ $list = $stmt->fetchAll();
   <div class="row">
 
     <div class="add col-md-6 col-sm-6 mx-auto text-center mb-2">
-      <a class="form_list" href="form_list.php?project=<?php echo $_GET['project'] ?>"><i class="fas fa-plus-circle"></i></a>
+      <a class="form_list" href="form_list.php?project=<?php echo $_GET['project'] ?>&amp;id=<?php echo $_SESSION['id'] ?>"><i class="fas fa-plus-circle"></i></a>
     </div>
 
   </div>

@@ -28,7 +28,7 @@ if (isset($_POST['name'])){
           <?php
 
 
-                header("Refresh:1; URL=project.php?project=" . $_GET['project'] . "&list=" . $_GET['list'] ."");
+                header("Refresh:1; URL=project.php?project=" . $_GET['project'] . "&list=" . $_GET['list'] . "&id=" . $_SESSION['id'] ."");
                 unset($bdd);
              }
 

@@ -12,8 +12,8 @@ if(!empty($_POST['done'])){
     'id_task' => $_GET['task']
     ));
 
-        echo 'Task done';
-        header("Refresh:1; URL=task.php?list=" . $_GET['list'] ."&project=" . $_GET['project'] ."");
+        echo '<img class="loading m-5" src="img/ping.gif">Task done';
+        header("Refresh:1; URL=task.php?list=" . $_GET['list'] ."&project=" . $_GET['project'] ."&id=" . $_SESSION['id'] ."");
         unset($bdd);
 
 }
@@ -25,7 +25,7 @@ if(!empty($_POST['done'])){
        'id_list' => $_GET['list']
      ));
 
-       echo "task don't change";
-       header("Refresh:1; URL=task.php?list=" . $_GET['list'] . "&project=" . $_GET['project'] ."");
+       echo '<img class="loading m-5" src="img/ping.gif">task not changed';
+       header("Refresh:1; URL=task.php?list=" . $_GET['list'] . "&project=" . $_GET['project'] ."&id=" . $_SESSION['id']   ."");
        unset($bdd);
 }

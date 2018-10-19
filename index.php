@@ -9,6 +9,10 @@ include('header.php');
 
 $project = $bdd->query('SELECT * FROM project WHERE id_members = ' . $_SESSION["id"] .'');
 
+
+if(!empty($_SESSION['id'])){
+
+
 ?>
 
 <nav aria-label="breadcrumb">
@@ -25,7 +29,7 @@ $project = $bdd->query('SELECT * FROM project WHERE id_members = ' . $_SESSION["
   <div class="row">
 
     <div class="add col-md-6 col-sm-6 mx-auto  p-0 m-0 text-center mb-2">
-      <a class="form_project" href="form_project.php"><i class="fas fa-plus-circle"></i></a>
+      <a class="form_project" href="form_project.php?id=<?php echo $_SESSION['id'] ?>"><i class="fas fa-plus-circle"></i></a>
     </div>
 
   </div>
@@ -39,13 +43,13 @@ $project = $bdd->query('SELECT * FROM project WHERE id_members = ' . $_SESSION["
     <?php foreach($project as $key => $value){ ?>
 
       <div class="project col-md-4 col-xs-12 d-flex mb-5 text-center justify-content-center">
-        <a class="link_project" href=project.php?project=<?php echo $value['id'] ?>>
+        <a class="link_project" href=project.php?project=<?php echo $value['id'] ?>&amp;id=<?php echo $_SESSION['id'] ?>>
           <div class="project_name">
 
             <p><?php echo $value['name']; ?></p>
             <p><?php echo $value['limit_date']; ?></p>
 
-              <form class="trash" action="deleteproject.php?project=<?php echo $value['id'] ?>" method="post">
+              <form class="trash" action="deleteproject.php?project=<?php echo $value['id'] ?>&amp;id=<?php echo $_SESSION['id'] ?>" method="post">
                 <input class="trashin" type="submit" value="&#10007;">
               </form>
 
@@ -56,7 +60,6 @@ $project = $bdd->query('SELECT * FROM project WHERE id_members = ' . $_SESSION["
       <?php
 
       }
-        $project->closeCursor();
       ?>
 
   </div>
@@ -64,6 +67,12 @@ $project = $bdd->query('SELECT * FROM project WHERE id_members = ' . $_SESSION["
 
 
 <?php
+
+} else {
+
+  header('Location: connexion.php');
+
+}
 
 include('footer.php');
 

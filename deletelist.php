@@ -11,12 +11,12 @@ require('config.php');
 
     echo "list deleted";
 
-    header("Refresh:1; URL=project.php?project=" . $_GET['project'] ."");
+    header("Refresh:1; URL=project.php?project=" . $_GET['project'] . "&id=" . $_SESSION['id'] ."");
 
   } else {
 
     echo "list not deleted";
 
-    header("Refresh:1; URL=project.php?project=" . $_GET['project'] ."");
+    header("Refresh:1; URL=project.php?project=" . $_GET['project'] . "&id=" . $_SESSION['id'] ."");
 
 }

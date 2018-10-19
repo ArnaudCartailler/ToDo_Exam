@@ -97,6 +97,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.loading{
+  width : 50%;
+}
+
 /*Front of the header*/
 
 .header{

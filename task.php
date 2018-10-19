@@ -29,7 +29,7 @@ $task = $det->fetchAll();
 
     <div class="form col-md-6">
 
-      <form class="form_project" action="add_task.php?list=<?php echo $_GET['list'] ?>&project=<?php echo $_GET['project'] ?>" method="post">
+      <form class="form_project" action="add_task.php?list=<?php echo $_GET['list'] ?>&project=<?php echo $_GET['project'] ?>&amp;id=<?php echo $_SESSION['id'] ?>" method="post">
 
         <p>Task Name</p>
 
@@ -66,7 +66,7 @@ $task = $det->fetchAll();
 ?>
 
    <a href="modify_taskform.php?task=<?php echo $value['id'] ?>&amp;list=<?php echo $_GET['list'] ?>&amp;project=<?php echo $_GET['project'] ?>"><li><?php echo $value['name'] . ' ' . ' /' . ' ' . $value['date_limit'] . ' ' .  '/' . ' ' . $task_real ?></li></a>
-   <form class="trash" action="deletetask.php?task=<?php echo $value['id'] ?>&amp;list=<?php echo $_GET['list'] ?>&amp;project=<?php echo $_GET['project'] ?>" method="post">
+   <form class="trash" action="deletetask.php?task=<?php echo $value['id'] ?>&amp;list=<?php echo $_GET['list'] ?>&amp;project=<?php echo $_GET['project'] ?>&amp;id=<?php echo $_SESSION['id'] ?>" method="post">
      <input class="trashin" type="submit" value="&#10007;">
    </form>
 

@@ -5,7 +5,7 @@
 ?>
 
 
-<form class="form_listadd" action="add_list.php?project=<?php echo $_GET['project'] ?>" method="post">
+<form class="form_listadd" action="add_list.php?project=<?php echo $_GET['project'] ?>&amp;id=<?php echo $_SESSION['id'] ?>" method="post">
 
   <p>List Name:</p>
 
@@ -15,7 +15,7 @@
 
 </form>
 
-<a class="back_pro" href="project.php?project=<?php echo $_GET['project'] ?>">Back to Project page</a>
+<a class="back_pro" href="project.php?project=<?php echo $_GET['project'] ?>&amp;id=<?php echo $_SESSION['id'] ?>">Back to Project page</a>
 <?php
 
   include('footer.php')

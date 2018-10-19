@@ -9,14 +9,14 @@ require('config.php');
 
     $removetask = $bdd->exec("DELETE FROM task WHERE id =" . $_GET['task'] . "");
 
-    echo "task deleted";
+    echo '<img class="loading m-5" src="img/ping.gif">task deleted';
 
-    header("Refresh:1; URL=task.php?list=" . $_GET['list'] ."&project=" . $_GET['project'] ."");
+    header("Refresh:1; URL=task.php?list=" . $_GET['list'] ."&project=" . $_GET['project'] . "&id=" . $_SESSION['id'] ."");
 
   } else {
 
-    echo "task not deleted";
+    echo '<img class="loading m-5" src="img/ping.gif">task not deleted';
 
-    header("Refresh:1; URL=task.php?list=" . $_GET['list'] ."&project=" . $_GET['project'] ."");
+    header("Refresh:1; URL=task.php?list=" . $_GET['list'] ."&project=" . $_GET['project'] . "&id=" . $_SESSION['id'] ."");
 
 }
