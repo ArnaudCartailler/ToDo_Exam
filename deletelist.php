@@ -4,6 +4,7 @@ session_start();
 
 require('config.php');
 
+//Take list id form the correct user and delete it
 
   if (!empty($_SESSION['id'])) {
 

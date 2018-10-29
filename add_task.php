@@ -4,6 +4,8 @@ session_start();
 
 require 'config.php';
 
+//Add a task in a list
+
 if (isset($_POST['name'])){
 
     $_POST['name'] = htmlspecialchars($_POST['name']);

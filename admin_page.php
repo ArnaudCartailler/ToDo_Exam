@@ -6,7 +6,7 @@ require 'config.php';
 
 include('header.php');
 
-
+//Can't finish before release
 $req = $bdd->query('SELECT * FROM members');
 
 foreach($mem as $key => $value){ ?>

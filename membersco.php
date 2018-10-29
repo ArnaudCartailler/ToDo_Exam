@@ -6,6 +6,7 @@
 
     include('header.php');
 
+  //Verify the information in the database and allow or not the user to be connected
 
 $req = $bdd->prepare('SELECT * FROM members WHERE pseudo = :pseudo');
 

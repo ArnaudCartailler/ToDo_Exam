@@ -4,6 +4,7 @@ session_start();
 
 require 'config.php';
 
+//Verify if the old pseudo and the new is different and the same for the password
 
     if($_POST['pseudo'] != $_SESSION['pseudo']){
 
@@ -37,6 +38,8 @@ require 'config.php';
 
           $received = $req->fetch();
 
+      //update the user profil 
+      
           if(!empty($_POST['pseudo'])){
 
               $req = $bdd->prepare('UPDATE members SET pseudo = :pseudo, pass = :pass WHERE pseudo = :oldpseudo');

@@ -13,6 +13,8 @@ include('header.php');
   </ol>
 </nav>
 
+<!-- Form to update the pseudo and the pass of the user-->
+
 <form class="form_profilchange" action="changeprofil.php" method="post" enctype="multipart/form-data">
 
                   <p>Your new pseudo:</p>

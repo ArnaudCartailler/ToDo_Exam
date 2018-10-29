@@ -25,7 +25,9 @@
 
     <div class ="row text-center">
 
+
   <?php
+  //If the user is in the database he see this 
         if (!empty($_SESSION['id']) AND $_SESSION['admin'] == 0) {
           echo '<div class="col-md-4 index">
             <a href="index.php">Home</a>
@@ -37,6 +39,8 @@
             <a href="deco.php">Disconnect</a>
           </div>';
         } else if(!empty($_SESSION['id']) AND $_SESSION['admin']== 1){
+            //If the user is in the database and he is an admin he see this 
+
               echo '<div class="col-md-3 index">
             <a href="index.php">Home</a>
           </div>';
@@ -50,6 +54,7 @@
             <a href="deco.php">Disconnect</a>
           </div>';
         } else{
+          //If it's an anonymous 
           echo '<div class="col-md-6 index">
             <a href="index.php">Home</a>
           </div>';

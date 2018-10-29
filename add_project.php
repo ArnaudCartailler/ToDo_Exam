@@ -5,6 +5,8 @@ session_start();
 
 require 'config.php';
 
+//Verify if all field are good and add a project on the correct user
+
 if (isset($_POST['name']) AND !empty($_POST['summary']) AND isset($_POST['summary'])){
 
     $_POST['name'] = htmlspecialchars($_POST['name']);

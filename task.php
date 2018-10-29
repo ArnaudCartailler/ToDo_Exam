@@ -24,6 +24,7 @@ $task = $det->fetchAll();
   </ol>
 </nav>
 
+<!-- Form to add a task-->
 <div class="container-fluid ">
   <div class="row">
 

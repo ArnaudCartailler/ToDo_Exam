@@ -2,6 +2,7 @@
 
 require 'config.php';
 
+// Verify if all field aren't empty, hash the pass and add the member in BDD
 
 if (isset($_POST['email']) AND isset($_POST['pseudo'])){
 

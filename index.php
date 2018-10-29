@@ -38,7 +38,7 @@ if(!empty($_SESSION['id'])){
 <div class="container-fluid">
   <div class="row">
 
-  <!-- Display all project -->
+  <!-- Display all project from the user-->
 
     <?php foreach($project as $key => $value){ ?>
 

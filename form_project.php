@@ -11,6 +11,8 @@
   </ol>
 </nav>
 
+<!-- Allow the user to create a project-->
+
 <form class="form_addproject" action="add_project.php?id=<?php echo $_SESSION['id'] ?>" method="post">
 
   <p>Project Name:</p>

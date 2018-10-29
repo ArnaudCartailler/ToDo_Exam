@@ -4,6 +4,7 @@ session_start();
 
 require 'config.php';
 
+//Modify task state by give it a tinyint info
 
 if(!empty($_POST['done'])){
 

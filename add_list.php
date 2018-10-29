@@ -5,6 +5,8 @@ session_start();
 require 'config.php';
 
 
+// Adding list on the BDD by SQL Request
+
 if (isset($_POST['name'])){
 
     $_POST['name'] = htmlspecialchars($_POST['name']);

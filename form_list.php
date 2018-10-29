@@ -4,6 +4,7 @@
 
 ?>
 
+<!-- Allow the user to create a list-->
 
 <form class="form_listadd" action="add_list.php?project=<?php echo $_GET['project'] ?>&amp;id=<?php echo $_SESSION['id'] ?>" method="post">
 

@@ -11,6 +11,8 @@
   <a class="signup" href="connexion.php">Sign up</a>
 </div>
 
+<!-- Anonymous user can create an account-->
+
 <form class="addmembers" action="addmembers.php" method="post" enctype="multipart/form-data">
 
                   <p>Veuillez taper votre pseudo:</p>

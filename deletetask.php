@@ -4,6 +4,8 @@ session_start();
 
 require('config.php');
 
+//Take task id form the correct user and delete it
+
 
   if (!empty($_SESSION['id'])) {
 

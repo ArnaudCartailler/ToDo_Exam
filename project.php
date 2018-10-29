@@ -24,7 +24,7 @@ if($project['done'] == 0){
   </ol>
 </nav>
 
-
+<!-- Show the detail of the project-->
   <div class="list col-md-12 col-xs-12 p-0 m-0 mt-3 text-center">
       <div class="list_name">
 
