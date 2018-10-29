@@ -662,6 +662,26 @@ margin-bottom: 20px;
   transition: 0.6s;
 }
 
+.back_task {
+  background-color: #02C2E6;
+  padding: 5px 10px 5px 10px;
+  color: black;
+  font-size: 17px;
+  margin-top: 20px;
+  border: none;
+  transition: 0.3s;
+  margin-left: 60px;
+}
+
+.back_task:hover {
+  text-decoration: none;
+  color: black;
+  border-radius: 100px;
+  transition: 0.6s;
+  box-shadow: 5px 5px 5px lightgrey;
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -748,8 +768,64 @@ margin-bottom: 20px;
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 768px) {
+
+/*Connexion*/
+
+.connect_form{
+  margin: auto;
+  text-align: center;
+}
+
+.connect .signin{
+  margin : auto;
+  text-align: center;
+}
+
+/*Inscription*/
+
+.connexion_form .signup {
+  margin-left : 25%;
+}
+
+.addmembers{
+   margin : auto;
+   text-align: center;
+
+}
+
+/*Profil page*/
+
+.form_profilchange{
+    margin : auto;
+    text-align: center;
+}
+
+/*form_project*/
+
+.form_addproject{
+    margin : auto;
+    text-align: center;
+}
+
+/*Form_list*/
+
+.form_listadd {
+  margin: auto;
+  text-align: center;
+}
+
+/*Modify task*/
+
+.form_modify{
+  margin-right : 50px;
+  text-align: center;
+}
+
+.back_task{
+    margin: auto;
+}
+
 }
 
 @media print,

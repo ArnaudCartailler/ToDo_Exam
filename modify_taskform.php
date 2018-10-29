@@ -18,6 +18,8 @@
 
 </form>
 
+<a class="back_task" href="task.php?list=<?php echo $_GET['list'] ?>&amp;task=<?php echo $_GET['task'] ?>&amp;project=<?php echo $_GET['project'] ?>&amp;id=<?php echo $_SESSION['id'] ?>">Back to list page</a>
+
 <?php
 
   include('footer.php')
